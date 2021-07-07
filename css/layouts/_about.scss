@@ -1,0 +1,41 @@
+.about-area{
+    .col-xl-4{
+        padding: 0;
+    }
+    .col-xl-8{
+        padding-left: 25px;
+    }
+    .about-img{
+        img{
+            height:500px;
+            width: 100%;
+        }
+    }
+    .about-content{
+        h2{
+            font-size: 50px;
+            line-height: 70px;
+            font-weight: 800;
+            color: #ff3636;
+            text-transform: capitalize;
+        }
+        h4{
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+        p{
+            font-size: 15px;
+        }
+        ul{
+            li{
+                font-size: 18px;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                i{
+                    color: #ff3636;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+@import 'variable';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+ul{
+    list-style: none;
+}
+p {
+    font-size: 16px;
+}
+/* Background css image */ 
+.bg{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    &:before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color:#333;
+        opacity: 0.75;
+        z-index:-1;
+    }
+}
+.mx-auto{
+    margin: 0 auto;
+}
+/* padding and mirgin */ 
+@for $i from 1 through 10{
+    .pt-#{$i*10}{
+        padding-top: $i*10px;
+    }
+    .pl-#{$i*10}{
+        padding-left: $i*10px;
+    }
+    .pr-#{$i*10}{
+        padding-right: $i*10px;
+    }
+    .pb-#{$i*10}{
+        padding-bottom: $i*10px;
+    }
+}
+
+@for $i from 1 through 10{
+    .mt-#{$i*10}{
+        margin-top: $i*10px;
+    }
+    .ml-#{$i*10}{
+        margin-left: $i*10px;
+    }
+    .mr-#{$i*10}{
+        margin-right: $i*10px;
+    }
+    .mb-#{$i*10}{
+        margin-bottom: $i*10px;
+    }
+}
+/*button css*/ 
+.btn{
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 3px;
+    line-height: 30px;
+    text-transform: capitalize;
+    &.btn-primary{
+        padding: 10px 30px;
+        background-color: tomato;
+        &:hover{
+            background-color: #333;
+        }
+    }
+    &.btn-border{
+        border: 2px solid #ff3636;
+        padding: 8px 30px;
+        &:hover{
+            background-color: #333;
+            border-color:#333;
+        }
+    }
+}
+
+$align:left,center,right,justify;
+@each $i in $align {
+    .text-#{$i}{
+        text-align: $i;
+    }
+}
+
+/*flex css */
+$flex:flex,inline-flex;
+@each $i in $flex {
+    .d-#{$i}{
+        display: $i;
+    }
+}
+
+$justify-content: start,center,end,evenly,space-around,space-between;
+@each $i in $justify-content {
+    .justify-content-#{$i}{
+        justify-content: $i;
+    }
+}
+
+$align-items: start,center,end,stretch,baseline;
+@each $i in $align-items {
+    .align-items-#{$i}{
+        align-items: $i;
+    }
+}
